@@ -3,6 +3,6 @@ import orderRouter from './order.router'
 
 const router = express.Router()
 
-router.use(orderRouter)
+router.use('/order', orderRouter)
 
 export default router
