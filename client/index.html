@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <h2>Orders Updates</h2>
+
+  <ul id="orders"></ul>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+  <script>
+    const socket = io("http://localhost:8080");
+
+    socket.on("order_changed", (data) => {
+
+      const li = document.createElement("li");
+      li.innerText = JSON.stringify(data);
+
+      document.getElementById("orders")
+        .appendChild(li);
+    });
+  </script>
+
+</body>
+
+</html>

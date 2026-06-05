@@ -1,5 +1,5 @@
 'use strict'
-import { GENDER } from '@src/utils/constants/public.constants'
+const { ORDER_STATUS } = require("../../utils/public.constant")
 
 module.exports = function (sequelize, DataTypes) {
   const Order = sequelize.define(
@@ -11,11 +11,11 @@ module.exports = function (sequelize, DataTypes) {
         primaryKey: true,
         type: DataTypes.INTEGER
       },
-      customer_name: {
+      customerName: {
         type: DataTypes.STRING,
         allowNull: false
       },
-      product_name: {
+      productName: {
         type: DataTypes.STRING,
         allowNull: false
       },
