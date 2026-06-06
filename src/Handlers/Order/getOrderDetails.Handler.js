@@ -12,10 +12,6 @@ export class GetOrderDetailsHandler extends BaseHandler {
       }
     });
 
-    if (!order) {
-      throw new Error('Order not found');
-    }
-
     return {
       success: true,
       data: order
