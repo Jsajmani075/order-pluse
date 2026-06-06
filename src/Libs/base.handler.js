@@ -28,6 +28,6 @@ export class BaseHandler {
     }
   }
   async run() {
-    throw new createError("The run() method must be implemented in childClass")
+    throw createError("The run() method must be implemented in childClass")
   }
 }
