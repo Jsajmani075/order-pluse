@@ -1,4 +1,4 @@
-import { AppError, createError } from "../../errors/app.error"
+import { AppError } from "../../errors/app.error"
 import { Errors } from "../../errors/errorCode"
 
 export const requestValidationMiddleware = (schema) => {
